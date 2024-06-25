@@ -10,7 +10,31 @@ function imc() {
     const resultado = document.getElementById('resultado');
 
     if(nome.value !== '' && altura !== '' && peso !== '') {
-        alert('valor preenchido')
+        
+        const valorIMC = (peso / (altura * altura)).toFixed(2);
+
+        let classificacao = "";
+
+        if(valorIMC < 18.5) {
+            classificacao = 'Abaixo do Peso.';
+
+        }else if(valorIMC < 25){
+            classificacao = 'com peso ideal. Parabéns!!';
+
+        }else if(valorIMC < 30){
+            classificacao = 'levemente acima do peso.';
+
+        }else if(valorIMC < 35){
+            classificacao = 'com obesidade grau 1.';
+
+        }else if(valorIMC < 40){
+            classificacao = 'obesidade grau 2.';
+        }else{
+            classificacao = 'obesidade grau 3. Cuidado!'
+        }
+
+        resultado.textContent = `${nome} seu IMC é ${valorIMC} e você está ${classificacao}`
+
     }else {
         resultado.textContent = 'Preencha todos os campos'
     }

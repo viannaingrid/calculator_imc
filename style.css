@@ -1,3 +1,15 @@
+
+body {
+    background-color: rgb(198, 224, 233);
+    height: 100%;
+}
+
+img {
+    width: 500px;
+    border: none;
+    margin-right: 100px;
+}
+
 main{
     display: flex;
     width: 100vw;

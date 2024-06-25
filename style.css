@@ -74,4 +74,5 @@ button {
     box-shadow: 0 0 10px rgb(0, 4, 14);
     padding: 20px;
     box-sizing: border-box;
+    user-select: none;
 }
